@@ -23,7 +23,7 @@ lint = [
 ]
 test = [
     "pytest>=7.0",
-    "pytest-ape",
+    "pytest-mock",
     "pytest-xdist",
 ]
 dev = [

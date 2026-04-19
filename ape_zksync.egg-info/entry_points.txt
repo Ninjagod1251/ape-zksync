@@ -1,0 +1,5 @@
+[ape_cli_subcommands]
+zksync = ape_zksync.__main__:cli
+
+[ape_plugins]
+zksync = ape_zksync

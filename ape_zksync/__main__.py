@@ -10,6 +10,7 @@ def cli():
 def info():
     """Show connected zkSync Era network info."""
     from ape import networks
+
     ecosystem = networks.get_ecosystem("zksync")
     click.echo(f"Ecosystem: {ecosystem.name}")
     for name, network in ecosystem.networks.items():

@@ -1,5 +1,5 @@
-from ape_ethereum.ecosystem import NetworkConfig
 from ape.api.config import PluginConfig
+from ape_ethereum.ecosystem import NetworkConfig
 
 
 class ZkSyncConfig(PluginConfig):

@@ -15,10 +15,33 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = [
-    "pytest",
-    "pytest-ape",
+lint = [
+    "black>=23.0,<25",
+    "flake8>=6.0,<8",
+    "isort>=5.10,<6",
+    "mypy>=1.0,<2",
 ]
+test = [
+    "pytest>=7.0",
+    "pytest-ape",
+    "pytest-xdist",
+]
+dev = [
+    "ape-zksync[lint,test]",
+]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
 
 [project.entry-points."ape_cli_subcommands"]
 zksync = "ape_zksync.__main__:cli"
